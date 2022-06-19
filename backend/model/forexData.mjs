@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const schema = mongoose.Schema;
 
-const dataSchema = new Schema({
+const dataSchema = new schema({
   equity: {
     type: String,
     required: true,
@@ -13,12 +13,12 @@ const dataSchema = new Schema({
     required: true,
   },
 
-  marketWatchTime: {
-    type: String,
-    required: true,
-  },
+  // marketWatchTime: {
+  //   type: String,
+  //   required: true,
+  // },
 });
 
-const Data = mongoose.Model("Data", dataSchema);
+const Data = mongoose.model("Data", dataSchema);
 
 export default Data;
